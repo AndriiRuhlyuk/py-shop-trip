@@ -5,8 +5,8 @@ from typing import Any, Dict, List
 @dataclass
 class Shop:
     name: str
-    location: field(default_factory=List[float])
-    products: field(default_factory=Dict[str, float])
+    location: List
+    products: Dict
 
     def calculate_purchase_cost(
             self,

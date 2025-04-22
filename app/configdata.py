@@ -42,11 +42,11 @@ def create_shop(shop_data: List[Dict[str, Any]]) -> List[Shop]:
     shops = []
 
     for shop in shop_data:
-        storage = Shop(
+        shop_instance = Shop(
             name=shop["name"],
             location=shop["location"],
             products=shop["products"]
         )
-        shops.append(storage)
+        shops.append(shop_instance)
 
     return shops
