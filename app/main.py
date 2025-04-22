@@ -42,8 +42,8 @@ def shop_trip() -> None:
                     shop_details["info"]
                 )
 
-                travel_cost = cost_chippest_shop - shop_details["product_cost"]
-                cust.money -= travel_cost
+                cust.money -= (cost_chippest_shop
+                               - shop_details["product_cost"])
 
                 cust.move_to_home()
 
